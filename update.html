@@ -1,0 +1,88 @@
+<div id="inject$uuid">
+
+	<h1>Modifica contatto</h1>
+
+	<form> 
+		<div class="input-group">
+			<span class="input-group-addon">Nome</span>
+			<input class="form-control" placeholder="Nome" data="nome">
+		</div> 
+		<br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">Cognome</span>
+			<input class="form-control" placeholder="Cognome" data="cognome">
+		</div> 
+		<br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">Telefono</span>
+			<input class="form-control" placeholder="Telefono" data="telefono">
+		</div> 
+		<br>
+		
+		<button class="btn btn-default">Salva</button>
+	</form>
+
+</div>
+
+<script>
+(
+	function(uuid)
+	{
+		var jQo = $("#" + uuid);
+		
+		var currId = app.router.getParameter("id");
+		console.log(currId);
+		
+		$.ajax("api/index.php?tname=contatti&action=read&id=" + currId)
+			.done(function(data){
+				var read = JSON.parse(data);
+				
+				console.log(read);  
+				
+				Object.keys(read).forEach(function(key){
+					jQo.find("[data=" + key + "]").val(read[key]);
+				});
+			});		
+		
+		jQo.find("button").click(function(evt){
+			evt.preventDefault();
+			
+			console.log("tasto premuto");
+			
+			var payload = {};
+			
+			jQo.find("[data]").each(function(){
+				var key = $(this).attr("data");
+				var val = $(this).val();
+				
+				payload[key] = val;
+			});
+			
+			console.log(payload);
+			
+			$.ajax
+			({
+				url: "api/index.php?tname=contatti&action=update&id=" + currId,
+				type: "POST",
+				data: payload,
+			})
+				.done(function(data){
+					var res = JSON.parse(data);
+					
+					console.log(res);
+					app.router.loadPage("list");
+				});
+		});
+	}
+)("inject$uuid");
+</script>
+
+<style>
+[list]
+{
+	border: 1px solid #333;
+	padding: 20px;
+}
+</style>

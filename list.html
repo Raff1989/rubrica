@@ -1,0 +1,41 @@
+<div id="inject$uuid">
+
+	<h1>Contatti</h1>
+
+	<ul class="list-group"></ul>
+
+</div>
+
+<script>
+(
+	function(uuid)
+	{
+		var jQo = $("#" + uuid);
+		
+		$.ajax("api/index.php?tname=contatti&action=list")
+			.done(function(data){
+				var list = JSON.parse(data);
+				
+				console.log(list);
+				
+				list.forEach(function(el){
+					jQo.find(".list-group").append('<li class="list-group-item" data-id="' + el.id + '">' + el.nome + " " + el.cognome + "</li>");
+				});
+				
+				jQo.find(".list-group-item").click(function(){
+					var id = $(this).attr("data-id");
+					console.log("cliccato", id);
+					
+					app.router.setPage("read", {id: id});
+				});
+			});
+	}
+)("inject$uuid");
+</script>
+
+<style>
+.list-group-item
+{
+	cursor: pointer;
+}
+</style>

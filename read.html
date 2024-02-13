@@ -1,0 +1,68 @@
+<div id="inject$uuid">
+
+	<h1><span data="nome"></span> <span data="cognome"></span></h1>
+	
+	<span data="telefono"></span>
+	
+	<br>
+	<br>
+	<br>
+
+	<button class="btn btn-danger">Cancella Contatto</button>
+	<button class="btn btn-warning">Modifica Contatto</button>
+
+</div>
+
+<script>
+(
+	function(uuid)
+	{
+		var jQo = $("#" + uuid);
+		
+		var currId = app.router.getParameter("id");
+		console.log(currId);
+		
+		$.ajax("api/index.php?tname=contatti&action=read&id=" + currId)
+			.done(function(data){
+				var read = JSON.parse(data);
+				
+				console.log(read);
+				
+				Object.keys(read).forEach(function(key){
+					jQo.find("[data=" + key + "]").text(read[key]);
+				});
+			});
+
+		jQo.find("button.btn-danger").click(function(evt){
+			evt.preventDefault();
+			
+			console.log("tasto premuto");
+			
+			$.ajax
+			({
+				url: "api/index.php?tname=contatti&action=delete&id=" + currId,
+				type: "GET",
+			})
+				.done(function(data){
+					var res = JSON.parse(data);
+					app.router.setPage("list");
+				});
+		});
+
+		jQo.find("button.btn-warning").click(function(evt){
+			evt.preventDefault();
+			
+			console.log("tasto premuto");
+			app.router.setPage("update", {id: currId});
+		});
+	}
+)("inject$uuid");
+</script>
+
+<style>
+[list]
+{
+	border: 1px solid #333;
+	padding: 20px;
+}
+</style>
