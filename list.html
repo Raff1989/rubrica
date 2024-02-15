@@ -4,6 +4,8 @@
 
 	<ul class="list-group"></ul>
 
+	
+
 </div>
 
 <script>
@@ -17,10 +19,11 @@
 				var list = JSON.parse(data);
 				
 				console.log(list);
-				
+
 				list.forEach(function(el){
-					jQo.find(".list-group").append('<li class="list-group-item" data-id="' + el.id + '">' + el.nome + " " + el.cognome + "</li>");
+					jQo.find(".list-group").append('<li class="list-group-item mt-3 rounded d-flex justify-content-center align-item-center shadow" data-id="' + el.id + '">' + el.nome + " " + el.cognome + "</li>");
 				});
+			
 				
 				jQo.find(".list-group-item").click(function(){
 					var id = $(this).attr("data-id");
@@ -37,5 +40,6 @@
 .list-group-item
 {
 	cursor: pointer;
+	border-color: red;
 }
 </style>

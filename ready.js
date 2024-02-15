@@ -1,91 +1,91 @@
 
 
-$(document).ready(function () {
-    $("#list").click(function () {
-        window.location.href = "list.html";
-    });
+// $(document).ready(function () {
+//     $("#list").click(function () {
+//         window.location.href = "list.html";
+//     });
 
-    $(document).ready(function() {
-        // Funzione per caricare il contenuto delle pagine
-        function loadPage(page) {
-            $('#content').load(page);
-        }
-    });
+//     $(document).ready(function() {
+//         // Funzione per caricare il contenuto delle pagine
+//         function loadPage(page) {
+//             $('#content').load(page);
+//         }
+//     });
     
-        // Gestione del click sui link
-        $('#list').click(function(e) {
-            e.preventDefault();
-            loadPage('index.html');
-        });
+//         // Gestione del click sui link
+//         $('#list').click(function(e) {
+//             e.preventDefault();
+//             loadPage('index.html');
+//         });
 
     
-});
-
-
-
-$(document).ready(function() {
-    function loadPage(page) {
-        $('#content').load(page);
-    }
-
-    // Caricamento dinamico delle pagine
-    $('#newContact').click(function(e) {
-        e.preventDefault();
-        loadPage('newContact.html');
-    });
-
-    $('#cercaContatti').click(function(e) {
-        e.preventDefault();
-        loadPage('search.html');
-    });
-
-   
-    
-$(document).ready(function () {
-    $("#detail").click(function () {
-        window.location.href = "detail.html";
-    });
-
-});
-
-// $('#detail').click(function(e) {
-//     e.preventDefault();
-//     loadPage('detail.html');
 // });
 
 
-$(document).ready(function () {
-    $("#modifica").click(function () {
-        window.location.href = "edit.html";
-    })
-});
+
+// $(document).ready(function() {
+//     function loadPage(page) {
+//         $('#content').load(page);
+//     }
+
+//     // Caricamento dinamico delle pagine
+//     $('#newContact').click(function(e) {
+//         e.preventDefault();
+//         loadPage('newContact.html');
+//     });
+
+//     $('#cercaContatti').click(function(e) {
+//         e.preventDefault();
+//         loadPage('search.html');
+//     });
+
+   
+    
+// $(document).ready(function () {
+//     $("#detail").click(function () {
+//         window.location.href = "detail.html";
+//     });
+
+// });
+
+// // $('#detail').click(function(e) {
+// //     e.preventDefault();
+// //     loadPage('detail.html');
+// // });
 
 
-$(document).ready(function () {
-    $("#newContact").click(function () {
-        window.location.href = "newContact.html";
-    })
-});
+// $(document).ready(function () {
+//     $("#modifica").click(function () {
+//         window.location.href = "edit.html";
+//     })
+// });
 
-$(document).ready(function () {
-    $("#cercaContatti").click(function () {
-        window.location.href = "search.html";
-    })
-});
 
-$(document).ready(function () {
-    $("#search").click(function () {
-        window.location.href = "search.html";
-    })
-});
+// $(document).ready(function () {
+//     $("#newContact").click(function () {
+//         window.location.href = "newContact.html";
+//     })
+// });
 
-$(document).ready(function () {
-    $("#indietro").click(function () {
-        window.location.href = "newContact.html";
-    })
-});
+// $(document).ready(function () {
+//     $("#cercaContatti").click(function () {
+//         window.location.href = "search.html";
+//     })
+// });
 
-});
+// $(document).ready(function () {
+//     $("#search").click(function () {
+//         window.location.href = "search.html";
+//     })
+// });
+
+// $(document).ready(function () {
+//     $("#indietro").click(function () {
+//         window.location.href = "newContact.html";
+//     })
+// });
+
+// });
 // $(document).ready(function() {
 //     var urlParams = new URLSearchParams(window.location.search);
 //     var nome = urlParams.get('nome');

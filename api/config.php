@@ -7,4 +7,4 @@ $config->db = new StdClass();
 $config->db->host 		= "127.0.0.1";
 $config->db->dbname 	= "ungolo";
 $config->db->username 	= "root";
-$config->db->password 	= "crRGg103!c";
+$config->db->password 	= "";
