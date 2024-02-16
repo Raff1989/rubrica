@@ -1,26 +1,165 @@
-.nav
+.bar
 {
-
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    top: 10px;
+    left: 50%;
+    align-items: center;
+    text-align: center;
+    
+    
+    
+    
 }
 
-.img
-{
-    background: url(image/82853.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: static;
-   
-    
 
+.Btn 
+{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 150px;
+    height: auto;
+}
+
+
+.Img
+{   
+    position:fixed;
+    object-fit: cover;
+    width: auto;
+}
+
+.Img1
+{
+    width: 300px;
+    top:80%;
+    left: 75%;
+}
+
+.Img2
+{
+    width: 300px;
+    right: 75%;
+}
+
+.Img3
+{
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: rgba(255, 255, 255, 0.705);
+    opacity: 25%;
+}
+
+.Img4
+{
+    width: 300px;
+    left: 75%;
+}
+
+.Img5
+{
+    width: 300px;
+    top:80%;
+    right: 75%;
 }
 
 .card 
 {
-    
-   
-    text-align: justify;
-    border-radius: 20%;
+    position: absolute;
     z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 300px;
+    background: rgb(125,209,31);
+    background: linear-gradient(170deg, rgba(125,209,31,0.6134103299522935) 0%, rgba(101,127,134,0.5797968845741421) 59%, rgba(0,87,122,1) 100%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);   
+}
 
+.Ul
+{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%);
     
+}
+/* footer */
+.button
+{
+    position: relative;
+}
+.button1
+{
+    right: 70%;
+    width: 4vw ;
+    height: 5vh ; 
+    border: none;
+    background: transparent;
+    color: red;  
+}
+.button2
+{  
+    left: 0%;
+    width: 4vw ;
+    height: 5vh ; 
+    border: none;
+    background: transparent;
+    color: red;
+}
+.button3
+{
+    left: 70%;
+    width: 4vw ;
+    height: 5vh ; 
+    border: none;
+    background: transparent;
+    color: red;
+}
+
+.Icon 
+{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 50%;
+}
+
+.input-group
+{
+    margin-bottom: 50px;
+	border: none;
+    width: auto;
+	margin: 10px;
+	text-shadow: 2px 2px rgba(9, 9, 9, 0.129);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    
+    
+}
+
+.inject
+{   
+    
+    margin: 20px;
+    margin-bottom: 20px;
+	border: none;
+    width: auto;
+	text-shadow: 3px 3px rgba(9, 9, 9, 0.129);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: rgba(240, 248, 255, 0.559);
+    border-radius: 30px;
+    
+}
+.inject1
+{
+    margin-bottom: 10px;
+	border: none;
+    width: auto;
+	text-shadow: 3px 3px rgba(9, 9, 9, 0.129);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    margin: 20px;
 }

@@ -3,10 +3,10 @@
 	<h1>Contatti</h1>
 
 	<ul class="list-group"></ul>
-
 	
 
 </div>
+
 
 <script>
 (
@@ -21,7 +21,7 @@
 				console.log(list);
 
 				list.forEach(function(el){
-					jQo.find(".list-group").append('<li class="list-group-item mt-3 rounded d-flex justify-content-center align-item-center shadow" data-id="' + el.id + '">' + el.nome + " " + el.cognome + "</li>");
+					jQo.find(".list-group").append('<li class="list-group-item mt-3 fw-bolder rounded-2" data-id="' + el.id + '">' + el.nome + " " + el.cognome + "</li>");
 				});
 			
 				
@@ -40,6 +40,12 @@
 .list-group-item
 {
 	cursor: pointer;
-	border-color: red;
+	margin-bottom: 100px;
+	border: none;
+	margin: 10px;
+	text-shadow: 2px 2px rgba(9, 9, 9, 0.129);
+	width: auto;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
 }
 </style>

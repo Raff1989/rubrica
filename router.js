@@ -67,6 +67,8 @@ function Router()
 			
 			app.component.renderComponents("[view]");
 		})
+		console.log("router.js", "loadPage", "pageName", pageName);
+		
 	}
 	
 	this.setPage = function(pageName, params = {})
