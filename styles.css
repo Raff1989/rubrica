@@ -1,17 +1,12 @@
-.bar
+* 
 {
-    position: absolute;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    top: 10px;
-    left: 50%;
-    align-items: center;
-    text-align: center;
-    
-    
-    
-    
+    font-family: 'Pacifico', cursive;
+}
+
+.logo
+{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border: solid black;
 }
 
 
@@ -27,44 +22,83 @@
 {   
     position:fixed;
     object-fit: cover;
-    width: auto;
+    width: 100vw;
+    top: 15%;
+    background:none;
+   
 }
+
+.img-1 
+{
+
+    width: 120px;
+    height: 120px;
+}
+
+.img-2
+{
+
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.img-3
+{
+
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
 
 .Img1
 {
-    width: 300px;
-    top:80%;
-    left: 75%;
-}
-
-.Img2
-{
-    width: 300px;
-    right: 75%;
-}
-
-.Img3
-{
-    width: 800px;
+    position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
-    background-color: rgba(255, 255, 255, 0.705);
-    opacity: 25%;
+    transform: translate(-50% , 100%);
+    width: 150px;
+    margin: 30px;
+    padding: 6px;
+    background: rgb(125,209,31);
+    background: linear-gradient(170deg, rgba(125,209,31,0.6134103299522935) 0%, rgba(101,127,134,0.5797968845741421) 59%, rgba(0,87,122,1) 100%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+    
 }
-
-.Img4
+.Img2
 {
-    width: 300px;
-    left: 75%;
-}
-
-.Img5
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -30%;
+    transform: translate(-30% , 100%);
+    width: 150px;
+    margin: 30px;
+    padding: 6px;
+    background: rgb(125,209,31);
+    background: linear-gradient(170deg, rgba(125,209,31,0.6134103299522935) 0%, rgba(101,127,134,0.5797968845741421) 59%, rgba(0,87,122,1) 100%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+} 
+.Img3
 {
-    width: 300px;
-    top:80%;
-    right: 75%;
-}
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -30%;
+    transform: translate(245% , 100%);
+    width: 150px;
+    margin: 30px;
+    padding: 6px;
+    background: rgb(125,209,31);
+    background: linear-gradient(170deg, rgba(125,209,31,0.6134103299522935) 0%, rgba(101,127,134,0.5797968845741421) 59%, rgba(0,87,122,1) 100%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+} 
+
 
 .card 
 {
@@ -101,6 +135,7 @@
     border: none;
     background: transparent;
     color: red;  
+    
 }
 .button2
 {  
